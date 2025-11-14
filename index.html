@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Music Search — iTunes API</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="container">
+    <h1>🎵 Music Search</h1>
+  </header>
+
+  <main class="container">
+    <section class="search-box">
+      <label for="query" class="sr-only">Search for artist, song, or album</label>
+      <input id="query" type="search" placeholder="Try: Taylor Swift, Weekend, Believer..." />
+      <button id="searchBtn" aria-label="Search">Search</button>
+      <button id="luckyBtn" aria-label="I'm feeling lucky">I'm Feeling Lucky</button>
+    </section>
+
+    <section class="options">
+      <div class="option">
+        <label for="limit">Results</label>
+        <select id="limit">
+          <option value="10" selected>10</option>
+          <option value="20">20</option>
+          <option value="30">30</option>
+        </select>
+      </div>
+      <div class="option">
+        <label for="entity">Type</label>
+        <select id="entity">
+          <option value="song" selected>Song</option>
+          <option value="musicArtist">Artist</option>
+          <option value="album">Album</option>
+          <option value="musicVideo">Music Video</option>
+          <option value="podcast">Podcast</option>
+        </select>
+      </div>
+    </section>
+
+    <section id="status" role="status" aria-live="polite"></section>
+
+    <section id="results" class="grid" aria-label="Search results"></section>
+  </main>
+
+  <footer class="container footer">
+    <small>
+      © 2025 <a href="https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/index.html" target="_blank" rel="noopener">Elyas Bahassan</a>
+       • CPIT‑405
+      
+    </small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
